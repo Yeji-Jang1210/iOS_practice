@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dum-ue-Ar8">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LwQ-td-x9q">
+    <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="auto_layout_example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaP-Ni-r0r" userLabel="blueView">
-                                <rect key="frame" x="50" y="530" width="200" height="100"/>
+                                <rect key="frame" x="94" y="486" width="200" height="100"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="U9Z-Je-VLy"/>
@@ -42,17 +42,17 @@
             <objects>
                 <viewController id="Dum-ue-Ar8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S0O-rO-anj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LongLongLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvl-fd-pE1">
-                                <rect key="frame" x="32" y="371" width="167.33333333333334" height="31"/>
+                                <rect key="frame" x="76" y="327" width="408" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EiU-3o-1fh">
-                                <rect key="frame" x="242.33333333333337" y="346" width="107" height="81"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EiU-3o-1fh">
+                                <rect key="frame" x="527" y="346" width="107" height="81"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
@@ -78,6 +78,49 @@
             </objects>
             <point key="canvasLocation" x="1087.2" y="402.70935960591135"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="XR5-Z5-giP">
+            <objects>
+                <viewController id="LwQ-td-x9q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ppW-wU-jmE">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WkC-iv-nrm" userLabel="YellowView">
+                                <rect key="frame" x="64" y="20" width="351.33333333333331" height="314"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lpe-l2-uqD" userLabel="GreenView">
+                                <rect key="frame" x="631" y="20" width="117" height="314"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aqi-t3-8Qx" userLabel="BlueView">
+                                <rect key="frame" x="435.33333333333331" y="20" width="175.66666666666669" height="314"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g4L-om-9mA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g4L-om-9mA" firstAttribute="bottom" secondItem="WkC-iv-nrm" secondAttribute="bottom" constant="20" id="69k-ZA-gsr"/>
+                            <constraint firstItem="Aqi-t3-8Qx" firstAttribute="width" secondItem="WkC-iv-nrm" secondAttribute="width" multiplier="1:2" id="CRW-rK-4MU"/>
+                            <constraint firstItem="Aqi-t3-8Qx" firstAttribute="top" secondItem="WkC-iv-nrm" secondAttribute="top" id="LpW-9T-DX3"/>
+                            <constraint firstItem="Aqi-t3-8Qx" firstAttribute="leading" secondItem="WkC-iv-nrm" secondAttribute="trailing" constant="20" id="Va7-VN-X1G"/>
+                            <constraint firstItem="Aqi-t3-8Qx" firstAttribute="bottom" secondItem="WkC-iv-nrm" secondAttribute="bottom" id="caR-oH-4R4"/>
+                            <constraint firstItem="Lpe-l2-uqD" firstAttribute="width" secondItem="WkC-iv-nrm" secondAttribute="width" multiplier="1:3" id="dYo-7e-d66"/>
+                            <constraint firstItem="g4L-om-9mA" firstAttribute="trailing" secondItem="Lpe-l2-uqD" secondAttribute="trailing" constant="20" id="kSb-GX-eFQ"/>
+                            <constraint firstItem="Lpe-l2-uqD" firstAttribute="top" secondItem="Aqi-t3-8Qx" secondAttribute="top" id="lyP-XC-vSP"/>
+                            <constraint firstItem="Lpe-l2-uqD" firstAttribute="leading" secondItem="Aqi-t3-8Qx" secondAttribute="trailing" constant="20" id="uON-qp-ZCH"/>
+                            <constraint firstItem="WkC-iv-nrm" firstAttribute="leading" secondItem="g4L-om-9mA" secondAttribute="leading" constant="20" id="yNg-DI-Hnt"/>
+                            <constraint firstItem="Lpe-l2-uqD" firstAttribute="bottom" secondItem="Aqi-t3-8Qx" secondAttribute="bottom" id="yyt-Qp-ZdD"/>
+                            <constraint firstItem="WkC-iv-nrm" firstAttribute="top" secondItem="g4L-om-9mA" secondAttribute="top" constant="20" id="z1W-cJ-au4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgQ-CV-c6t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="402.70935960591135"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
@@ -86,11 +129,17 @@
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
