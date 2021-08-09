@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		683C27E226C0FEE1005FECA2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C27E126C0FEE1005FECA2 /* Model.swift */; };
+		683C27E526C0FEEB005FECA2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C27E426C0FEEB005FECA2 /* ViewModel.swift */; };
 		686748B826C0F052004AF421 /* MVVMWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686748B726C0F052004AF421 /* MVVMWeatherApp.swift */; };
 		686748BA26C0F052004AF421 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686748B926C0F052004AF421 /* ContentView.swift */; };
 		686748BC26C0F053004AF421 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686748BB26C0F053004AF421 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		683C27E126C0FEE1005FECA2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		683C27E426C0FEEB005FECA2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		686748B426C0F052004AF421 /* MVVMWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		686748B726C0F052004AF421 /* MVVMWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMWeatherApp.swift; sourceTree = "<group>"; };
 		686748B926C0F052004AF421 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				686748C526C0F053004AF421 /* Info.plist */,
 				686748C226C0F053004AF421 /* MVVMWeather.xcdatamodeld */,
 				686748BD26C0F053004AF421 /* Preview Content */,
+				683C27E126C0FEE1005FECA2 /* Model.swift */,
+				683C27E426C0FEEB005FECA2 /* ViewModel.swift */,
 			);
 			path = MVVMWeather;
 			sourceTree = "<group>";
@@ -144,9 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				683C27E226C0FEE1005FECA2 /* Model.swift in Sources */,
 				686748C126C0F053004AF421 /* Persistence.swift in Sources */,
 				686748BA26C0F052004AF421 /* ContentView.swift in Sources */,
 				686748C426C0F053004AF421 /* MVVMWeather.xcdatamodeld in Sources */,
+				683C27E526C0FEEB005FECA2 /* ViewModel.swift in Sources */,
 				686748B826C0F052004AF421 /* MVVMWeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
