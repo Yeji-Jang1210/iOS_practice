@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 //data needed by view
 
 class WeatherViewModel : ObservableObject{
@@ -14,7 +13,7 @@ class WeatherViewModel : ObservableObject{
     @Published var descriptionText: String = ""
     @Published var temp: String = ""
     @Published var timezone: String = ""
-    @Published var iconURL: String = ""
+    @Published var iconURL : String = ""
     
     init(){
         fetchWeather()
@@ -39,7 +38,7 @@ class WeatherViewModel : ObservableObject{
                     self.descriptionText = model.current.weather.first?.description ?? "No Description"
                     self.temp = String(format:"%.1f",Double(model.current.temp) * 0.1)
                     self.timezone = model.timezone
-                    self.iconURL = "http://openweathermap.org/img/wn/\(model.current.weather.first?.icon ?? "01d").png"
+                    self.iconURL = "https://openweathermap.org/img/wn/\(model.current.weather.first?.icon ?? "01d").png"
                 }
             }
             catch{
