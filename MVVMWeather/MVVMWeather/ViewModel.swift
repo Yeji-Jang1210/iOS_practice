@@ -20,7 +20,7 @@ class WeatherViewModel : ObservableObject{
     }
     
     func fetchWeather(){
-        guard let url = URL(string:"https://api.openweathermap.org/data/2.5/onecall?lat=37&lon=126&exclude=hourly,daily,minutely&appid=011403b307bff9d59e037082360b03a1")
+        guard let url = URL(string:"https://api.openweathermap.org/data/2.5/onecall?lat=43&lon=131&exclude=hourly,daily,minutely&appid=011403b307bff9d59e037082360b03a1")
         else{
             return
         }
@@ -38,7 +38,7 @@ class WeatherViewModel : ObservableObject{
                     self.descriptionText = model.current.weather.first?.description ?? "No Description"
                     self.temp = String(format:"%.1f",Double(model.current.temp) * 0.1)
                     self.timezone = model.timezone
-                    self.iconURL = "https://openweathermap.org/img/wn/\(model.current.weather.first?.icon ?? "01d").png"
+                    self.iconURL = "https://openweathermap.org/img/wn/\(model.current.weather.first?.icon ?? "01d")@4x.png"
                 }
             }
             catch{
