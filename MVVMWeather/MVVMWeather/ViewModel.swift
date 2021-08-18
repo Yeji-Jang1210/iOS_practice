@@ -9,24 +9,23 @@ import Foundation
 //data needed by view
 
 class WeatherViewModel : ObservableObject{
-    @Published var title: String = ""
-    @Published var descriptionText: String = ""
-    @Published var temp: String = ""
-    @Published var timezone: String = ""
-    @Published var iconURL : String = ""
+    @Published var timeZone: String = ""
+    @Published var daily: [DailyWeather] = []
     
     init(){
         fetchWeather()
     }
     
     func fetchWeather(){
-        guard let url = URL(string:"https://api.openweathermap.org/data/2.5/onecall?lat=43&lon=131&exclude=hourly,daily,minutely&appid=011403b307bff9d59e037082360b03a1")
+        guard let url = URL(string:"https://api.openweathermap.org/data/2.5/onecall?lat=37&lon=126&exclude=hourly,current,alert,minutely&appid=011403b307bff9d59e037082360b03a1")
         else{
+            print("Invalid JSON url")
             return
         }
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else {
+                print("data Invalid")
                 return
             }
             
@@ -34,11 +33,26 @@ class WeatherViewModel : ObservableObject{
             do{
                 let model = try JSONDecoder().decode(WeatherModel.self,from:data)
                 DispatchQueue.main.async {
-                    self.title = model.current.weather.first?.main ?? "No Title"
+                    /*self.title = model.current.weather.first?.main ?? "No Title"
                     self.descriptionText = model.current.weather.first?.description ?? "No Description"
                     self.temp = String(format:"%.1f",Double(model.current.temp) * 0.1)
                     self.timezone = model.timezone
-                    self.iconURL = "https://openweathermap.org/img/wn/\(model.current.weather.first?.icon ?? "01d")@4x.png"
+                    self.iconURL = "https://openweathermap.org/img/wn/\(model.current.weather.first?.icon ?? "01d")@4x.png"*/
+                    self.timeZone = model.timezone
+                    print(self.timeZone)
+                    /*for (i, dailyWeather) in model.daily.enumerated(){
+                        self.daily[i].dt = dailyWeather.dt
+                        self.daily[i].temp.day = dailyWeather.temp.day
+                        for(index, info) in  dailyWeather.weather.enumerated(){
+                            self.daily[i].weather[index].main = info.main
+                            self.daily[i].weather[index].description = info.description
+                            self.daily[i].weather[index].icon = "https://openweathermap.org/img/wn/\(info.icon)@4x.png"
+                        }
+                    }*/
+                    for (index,dailyWeather) in model.daily.enumerated(){
+                        self.daily.append(dailyWeather)
+                    }
+                    
                 }
             }
             catch{

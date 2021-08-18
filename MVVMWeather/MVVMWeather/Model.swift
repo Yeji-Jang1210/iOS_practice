@@ -11,16 +11,21 @@ import Foundation
 
 struct WeatherModel : Codable{
     let timezone: String
-    let current: CurrentWeather
+    let daily: [DailyWeather]
 }
 
-struct CurrentWeather: Codable{
-    let temp: Float
-    let weather: [WeatherInfo]
+struct DailyWeather: Codable{
+    var dt: Int
+    var temp: Temperature
+    var weather: [WeatherInfo]
+}
+
+struct Temperature: Codable{
+    var day : Float
 }
 
 struct WeatherInfo: Codable{
-    let main:String
-    let description: String
-    let icon: String
+    var main:String
+    var description: String
+    var icon: String
 }
